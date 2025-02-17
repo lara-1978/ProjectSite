@@ -4,7 +4,7 @@ services:
       dockerfile: ./Dockerfile
     command:
       - 'gunicorn'
-      - 'ProjectSite.wsgi:application'
+      - 'mysite.wsgi:application'
       - '--bind'
       - '0.0.0.0:8000'
 
@@ -19,4 +19,4 @@ services:
         max-file: '10'
         max-size: '200k'
     volumes:
-      - ./ProjectSite/database:/app/database
+      - ./mysite/database:/app/database
